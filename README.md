@@ -31,10 +31,10 @@ After running deploy, you should see output similar to:
 ```bash
 Deploying aws-node-project to stage dev (us-east-1)
 
-✔ Service deployed to stack aws-node-project-dev (112s)
+✔ Service deployed to stack aws-node-project-dev
 
 functions:
-  hello: aws-node-project-dev-hello (1.5 kB)
+  backup: aws-node-project-dev-backup
 ```
 
 ### Invocation
@@ -42,31 +42,14 @@ functions:
 After successful deployment, you can invoke the deployed function by using the following command:
 
 ```bash
-serverless invoke --function hello
+serverless invoke --function backup
 ```
 
-Which should result in response similar to the following:
-
-```json
-{
-    "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": {}\n}"
-}
-```
 
 ### Local development
 
 You can invoke your function locally by using the following command:
 
 ```bash
-serverless invoke local --function hello
-```
-
-Which should result in response similar to the following:
-
-```
-{
-    "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
-}
+serverless invoke local --function backup
 ```
