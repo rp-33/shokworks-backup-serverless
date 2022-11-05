@@ -1,0 +1,25 @@
+org: ricardoperez
+app: backup-serverless
+service: backup-serverless
+
+frameworkVersion: '3'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+	
+plugins:
+  - serverless-offline-scheduler
+  - serverless-dotenv-plugin
+
+functions:
+  backup:
+    handler: handler.backup
+    events:
+      # run every day at 11:00PM UTC
+      - schedule: cron(0 23 * * ? *)
+
+

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1248.0",
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
+    "pg-copy-streams": "^6.0.4"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-offline-scheduler": "^0.5.0"
+  }
+}
